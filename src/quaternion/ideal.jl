@@ -77,7 +77,7 @@ end
 # q_I(alpha)/d < 2^a,
 # and -D*(2^ExponentFull - D) is divisible by l, where D = q_I(alpha)/d(2^c - q_I(alpha)/d)
 function element_for_response(I::LeftIdeal, Icomcha::LeftIdeal, nI::BigInt, nIcomcha::BigInt, a::Int, factors::Vector{Tuple{Int, Int}}, l::Int)
-    q(x, y) = div(quadratic_form(QOrderElem(x), QOrderElem(y)), 2)
+    q(x, y) = quadratic_form(QOrderElem(x), QOrderElem(y))
     bound = BigInt(1) << a
 
     # LLL reduction
@@ -86,7 +86,7 @@ function element_for_response(I::LeftIdeal, Icomcha::LeftIdeal, nI::BigInt, nIco
     LLLmat = Imatrix * H
     red_basis = [LLLmat[:, i] for i in 1:4]
 
-    q = make_quadratic_form_coeffs(red_basis, q)
+    q = make_quadratic_form_coeffs(red_basis, (x, y) -> q(x, y))
     S = zeros(Rational{Integer}, 4)
     U = zeros(Rational{Integer}, 4)
     L = zeros(Integer, 4)
