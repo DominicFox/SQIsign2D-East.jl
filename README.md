@@ -16,3 +16,5 @@ You can run benchmark for SQIsign2D-East and CompactSQIsign2D-East at the NIST s
 $ julia bench.jl
 ```
 
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
