@@ -1,9 +1,13 @@
 name = "SQIsign2D"
 uuid = "9802219a-e907-4900-b7c6-4eac29f14593"
-authors = ["Onuki <onuki@mist.i.u-tokyo.ac.jp>"]
 version = "0.1.0"
+authors = ["Onuki <onuki@mist.i.u-tokyo.ac.jp>"]
 
 [deps]
 Nemo = "2edaba10-b0f1-5616-af89-8c11ac63239a"
 SHA = "ea8e919c-243c-51af-8825-aaa63cd721ce"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+SHA = "0.7.0"
+Test = "1.11.0"
