@@ -1,5 +1,12 @@
 # Julia implementation of SQIsign2D-East
 
+> ** MSc Thesis Modifications:** 
+> This repository is a fork of the upstream reference implementation. It has been modified to integrate with a custom Rust benchmarking orchestrator for thesis evaluation. 
+> 
+> **Key Additions:**
+> * Wrote the `benchmark_2deast.jl` script to extract telemetry data
+> * Added the `sqisign2deast_key_vault.jls` file along with `read_julia_keys.jl` as a method of saving the complex key representations as they are generated. This enabled recovering specific keys later if needed.
+
 A proof-of-concept implementation of
 SQIsign2D-East proposed in
 [SQIsign2D-East: A New Signature Scheme Using 2-dimensional Isogenies](https://eprint.iacr.org/2024/771)
